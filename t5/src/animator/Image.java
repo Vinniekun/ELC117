@@ -10,11 +10,15 @@ class Image {
     BufferedImage img;
     Point pos;
     String path;
+    private Point limite;
 
     public Image(Point pos, BufferedImage img, String path) {
         this.pos = pos;
         this.img = img;
         this.path = path;
+        this.limite = (Point) pos.clone();
+        this.limite.x += 100;
+        this.limite.y += 100;
     }
 
     public Point getPos() {
@@ -41,6 +45,10 @@ class Image {
     
     public Point getPoint(){
         return pos;
+    }
+    
+    public Point getLimite(){
+        return limite;
     }
     
 }

@@ -23,6 +23,8 @@ public class Star {
     private int[] x2;
     private int[] y1;
     private int[] y2;
+    private Point limite;
+    private boolean increasing;
     
     public Star(Point p, String path, int radius1, int radius2){
         this.p = p;
@@ -34,6 +36,10 @@ public class Star {
         this.y1 = new int[3];
         this.y2 = new int[10];
         this.p = new Point(p.x,p.y);
+        this.limite = (Point) p.clone();
+        this.limite.x += 100;
+        this.limite.y += 100;
+        this.increasing = false;
     }
     
     public void desenha(Graphics g){
@@ -56,7 +62,7 @@ public class Star {
             x2[a] = x1[2];
             y2[a] = y1[2];
             
-            g.setColor(Color.YELLOW);
+            g.setColor(Color.BLUE);
             g.fillPolygon(x1, y1, 3);
         }
         g.fillPolygon(x2, y2, 5);
@@ -72,6 +78,31 @@ public class Star {
     
     public Point getPoint(){
         return p;
+    }
+    
+    public Point getLimite(){
+        return limite;
+    }
+    
+    public void raise(){
+        this.radius1 += 1;
+        this.radius2 += 1;
+    }
+    
+    public void drop(){
+        this.radius1 -= 1;
+        this.radius2 -= 1;
+    }
+    
+    public void zoom(){
+        if(this.radius1 == 25)
+            this.increasing = true;
+        if(this.radius1 == 50)
+            this.increasing = false;
+    }
+    
+    public boolean getBool(){
+        return this.increasing;
     }
     
 }

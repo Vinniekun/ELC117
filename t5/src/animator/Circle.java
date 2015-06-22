@@ -19,6 +19,8 @@ public class Circle {
     private int radius1;
     private int radius2;
     private Point p;
+    private Point limite;
+    private boolean increasing;
     
     
     
@@ -27,6 +29,10 @@ public class Circle {
         this.path = path;
         this.radius1 = radius1;
         this.radius2 = radius2;
+        this.limite = (Point) p.clone();
+        this.limite.x += 100;
+        this.limite.y += 100;
+        this.increasing = false;
     }
     
     public void desenha(Graphics g){
@@ -46,9 +52,29 @@ public class Circle {
         return p;
     }
     
+    public Point getLimite(){
+        return limite;
+    }
+       
+    public void raise(){
+        this.radius1 += 1;
+        this.radius2 += 1;
+    }
     
+    public void drop(){
+        this.radius1 -= 1;
+        this.radius2 -= 1;
+    }
     
+    public void zoom(){
+        if(this.radius1 == 40)
+            this.increasing = true;
+        if(this.radius1 == 100)
+            this.increasing = false;
+    }
     
-    
+    public boolean getBool(){
+        return this.increasing;
+    }
     
 }

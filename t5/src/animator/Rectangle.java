@@ -16,16 +16,24 @@ import java.util.ArrayList;
  */
 public class Rectangle {
     private String path;
-    private int x;
-    private int y;
+    private int x; //tamanho
+    private int y; //tamanho
     private Point p;
+    private Point centro;
+    private Point limite;
+    private boolean increasing;
     
     
     public Rectangle(Point p, String path, int x, int y){
         this.p = p;
+        this.centro = new Point(p.x, p.y); //(Point) p.clone();
         this.path = path;
         this.x = x;
         this.y = y;
+        this.limite = (Point) p.clone();
+        this.limite.x += 100;
+        this.limite.y += 100;
+        this.increasing = false;
     }
     
     public void desenha(Graphics g){
@@ -49,6 +57,41 @@ public class Rectangle {
         return p;
     }
     
+    public Point getCentro(){
+        return centro;
+    }
+    
+    public Point getLimite(){
+        return limite;
+    }
 
+    public int getX(){
+        return x;
+    }
+    
+    public int getY(){
+        return y;
+    }
+    
+    public void raise(){
+        this.x += 1;
+        this.y += 1;
+    }
+    
+    public void drop(){
+        this.x -= 1;
+        this.y -= 1;
+    }
+    
+    public void zoom(){
+        if(this.x == 100)
+            this.increasing = true;
+        if(this.x == 200)
+            this.increasing = false;
+    }
+    
+    public boolean getBool(){
+        return this.increasing;
+    }
     
 }

@@ -134,7 +134,7 @@ public class AnimatorController {
     
     private void createAndShowAnimFrame() {
 
-        animFrame = new JFrame("Animation");
+        animFrame = new JFrame("T5 - Vinicius Mateus Dreifke");
         isRunning = true;
         animFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         animFrame.addWindowListener(new WindowAdapter() {

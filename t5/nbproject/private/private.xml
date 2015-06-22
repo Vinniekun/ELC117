@@ -3,6 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/home/vinnie/java/Animator/src/animator/Circle.java</file>
+            <file>file:/home/vinnie/java/Animator/src/animator/Motion.java</file>
+            <file>file:/home/vinnie/java/Animator/src/animator/ObjectSet.java</file>
+            <file>file:/home/vinnie/java/Animator/src/animator/AnimatorGUI.java</file>
+            <file>file:/home/vinnie/java/Animator/src/animator/Rectangle.java</file>
+            <file>file:/home/vinnie/java/Animator/src/animator/Star.java</file>
+            <file>file:/home/vinnie/java/Animator/src/animator/Image.java</file>
+        </group>
     </open-files>
 </project-private>

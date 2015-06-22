@@ -64,33 +64,43 @@ public class AnimatorGUI extends javax.swing.JFrame {
         setResizable(false);
 
         comboSpeed.setModel(new javax.swing.DefaultComboBoxModel(Speed.values()));
+        comboSpeed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboSpeedActionPerformed(evt);
+            }
+        });
 
-        jLabel1.setText("Width");
+        jLabel1.setText("Largura");
 
-        jLabel3.setText("Speed");
+        jLabel3.setText("Velocidade");
 
-        jLabel2.setText("Height");
+        jLabel2.setText("Altura");
 
-        jLabel8.setText("# of objects");
+        jLabel8.setText("# de objetos");
 
-        comboPathImages.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Circle", "Line" }));
+        comboPathImages.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Stop", "Circle", "Line", "Spiral" }));
+        comboPathImages.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboPathImagesActionPerformed(evt);
+            }
+        });
 
         textImage.setText(AnimatorController.getDefaultFilename());
 
-        jLabel4.setText("Image");
+        jLabel4.setText("Imagem");
 
-        jLabel7.setText("Motion Path");
+        jLabel7.setText("Movimento");
 
-        jLabel6.setText("Object");
+        jLabel6.setText("Objeto");
 
-        buttonRun.setText("Run");
+        buttonRun.setText("Iniciar");
         buttonRun.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonRunActionPerformed(evt);
             }
         });
 
-        buttonStop.setText("Stop");
+        buttonStop.setText("Parar");
         buttonStop.setEnabled(false);
         buttonStop.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,15 +119,20 @@ public class AnimatorGUI extends javax.swing.JFrame {
             }
         });
 
-        comboPathShapes.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Zoom", "Circle", "Line" }));
+        comboPathShapes.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Stop", "Zoom", "Circle", "Line", "Spiral" }));
+        comboPathShapes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboPathShapesActionPerformed(evt);
+            }
+        });
 
-        jLabel9.setText("Shape");
+        jLabel9.setText("Forma");
 
         comboShape.setModel(new javax.swing.DefaultComboBoxModel(ShapeType.values()));
 
-        jMenu1.setText("File");
+        jMenu1.setText("Arquivo");
 
-        jMenuItemExit.setText("Exit");
+        jMenuItemExit.setText("Sair");
         jMenuItemExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemExitActionPerformed(evt);
@@ -127,9 +142,9 @@ public class AnimatorGUI extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Help");
+        jMenu2.setText("Ajuda");
 
-        jMenuItemAbout.setText("About");
+        jMenuItemAbout.setText("Sobre");
         jMenuItemAbout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemAboutActionPerformed(evt);
@@ -180,7 +195,7 @@ public class AnimatorGUI extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(textWidth)
                             .addComponent(textHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -261,9 +276,21 @@ public class AnimatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemExitActionPerformed
 
     private void jMenuItemAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAboutActionPerformed
-        JOptionPane.showMessageDialog(this, "Animator 1.0", "About", 
+        JOptionPane.showMessageDialog(this, "Animator 1.1\nVersão editada por Vinícius Mateus Dreifke", "Sobre", 
                 JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jMenuItemAboutActionPerformed
+
+    private void comboPathShapesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboPathShapesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboPathShapesActionPerformed
+
+    private void comboPathImagesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboPathImagesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboPathImagesActionPerformed
+
+    private void comboSpeedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboSpeedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboSpeedActionPerformed
 
     /**
      * @param args the command line arguments
